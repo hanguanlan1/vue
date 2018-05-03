@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://cdn.jsdelivr.net/vue/1.0.26/vue.min.js"></script>
+    <meta charset="UTF-8">
+    <title>a</title>
+</head>
+<body>
+<div id="app">
+    <partial v-bind:name="partialId"></partial>
+    <br>partialId:
+    <input type="text" v-model="partialId" placeholder="this is partialId">
+</div>
+<script>
+    Vue.partial('my-partial', '<p>This is a partial! {{ msg }}</p>');
+    Vue.partial('my-day', '<p>我的一天，就是现在！{{ msg }}</p>');
+    new Vue({
+        el: '#app',
+        data: {
+            partialId: 'my-day',
+            msg: '你好，我是韩冠兰！'
+        }
+    })
+</script>
+</body>
+</html>

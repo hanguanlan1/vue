@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>e</title>
+</head>
+<body>
+<div id="app">
+    <app-header></app-header>
+    <app-sidebar></app-sidebar>
+    <app-body></app-body>
+    <div style="clear:both"></div>
+    <app-footer></app-footer>
+</div>
+<script src="https://cdn.jsdelivr.net/vue/1.0.26/vue.min.js"></script>
+<script>
+    var appHeader = Vue.extend({
+        template: '<div id="Header">上方列</div>'
+    });
+    var appSidebar = Vue.extend({
+        template: '<div id="Sidebar">侧边栏</div>'
+    });
+    var appBody = Vue.extend({
+        template: '<div id="Body">内容</div>'
+    });
+    var appFooter = Vue.extend({
+        template: '<div id="Footer">页尾资讯</div>'
+    });
+    Vue.component('app-header', appHeader);
+    Vue.component('app-sidebar', appSidebar);
+    Vue.component('app-body', appBody);
+    Vue.component('app-footer', appFooter);
+    new Vue({
+        el: '#app'
+    })
+
+</script>
+</body>
+</html>

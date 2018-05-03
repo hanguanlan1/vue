@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>c</title>
+</head>
+<body>
+<div id="example-2">
+    Hello <span v-if="greeting">Vue.js</span>
+</div>
+<script src="../util/vue.js"></script>
+<script>
+    var exampleVM2 = new Vue({
+        el: '#example-2',
+        data: {
+            greeting: true
+        }
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>j</title>
+</head>
+<body>
+<div id="app">
+    <span>Message:{{ msg }}</span>
+    <input type="text" v-model="msg" placeholder="this is msg">
+    <br>
+    <span>this will never change: {{* msg1}}</span>
+    <input type="text" v-model="msg1" placeholder="this is msg1">
+</div>
+<script src="https://cdn.jsdelivr.net/vue/1.0.26/vue.min.js"></script>
+<script>
+    new Vue({
+        el:'#app',
+        data:{
+            msg:'Hello,Vue.js',
+            msg1:'I am Vue.js '
+        }
+    });
+
+</script>
+</body>
+</html>
