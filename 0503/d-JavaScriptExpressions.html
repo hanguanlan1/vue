@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="../util/vue.js"></script>
+    <meta charset="UTF-8">
+    <title>d</title>
+</head>
+<body>
+<div id="app">
+    {{ var a = 1 }}
+    {{ if (ok) {return message} }}
+</div>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            number: 100,
+            ok: true,
+            message: 'I love vue.js!'
+        }
+    })
+</script>
+</body>
+</html>

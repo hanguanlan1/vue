@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://cdn.jsdelivr.net/vue/1.0.26/vue.min.js"></script>
+    <meta charset="UTF-8">
+    <title>c</title>
+</head>
+<body>
+<div id="app">
+    <div>{{ number + 1 }}</div>
+    <div>{{ ok ? 'Yes':'No' }}</div>
+    <div>{{ message.split('').reverse().join('') }}</div>
+</div>
+<script>
+    new Vue({
+        el:'#app',
+        data:{
+            number:100,
+            ok:true,
+            message:'I love vue.js!'
+        }
+    })
+</script>
+
+</body>
+</html>
