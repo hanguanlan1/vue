@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="../util/vue.js"></script>
+    <meta charset="UTF-8">
+    <title>c</title>
+</head>
+<body>
+<div id="app">
+    <div v-for="(index,item) in items">
+        <div>
+            <span style="background: #ffff00;width: 80px;display: inline-block">
+                {{item.name}}
+            </span>
+            <input type="text"  v-model="item.value" lazy number>
+        </div>
+    </div>
+    计算后:{{total}}
+</div>
+<script>
+    Vue.config.debug = true;
+    var vm = new Vue({
+        el: '#app',
+        data: {
+            items: [{
+                name: '安全手套',
+                value: 100
+            }, {
+                name: '手电筒',
+                value: 200
+            }, {
+                name: '雨鞋',
+                value: 300
+            }]
+        },
+        computed: {
+            total: function () {
+                self = this;
+                var tmp = 0;
+                for (var i = 0; i < self.items.length; i++) {
+                    tmp = tmp + self.items[i].value;
+                }
+                return tmp;
+            }
+        }
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>d</title>
+    <script src="../util/vue.js"></script>
+</head>
+<style>
+    .big {
+        font-size: 30px;
+    }
+
+    .blue {
+        color: #FF0000;
+    }
+</style>
+<body>
+<div id="app">
+    <div class="{{className1}}">我在学习Vue.js</div>
+    <div v-bind:class="className2">Vue.js，是MVVM</div>
+    <div class="{{className1}}" v-bind:class="className2">这个是否可以这样用吗？</div>
+</div>
+<script>
+    new Vue({
+        el:'#app',
+        data:{
+            className1:'big',
+            className2:'blue'
+        }
+    })
+</script>
+</body>
+</html>

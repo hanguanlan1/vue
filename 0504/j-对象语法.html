@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>j</title>
+    <script src="../util/vue.js"></script>
+    <style>
+        .class-a {
+            color: #FF0000;
+        }
+
+        .classB {
+            text-decoration: underline;
+        }
+
+        .classC {
+            background-color: yellow
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    <div v-bind:class="[classA,{classB:isB,classC:isC}]">学习Vue.js</div>
+</div>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            classA: 'class-a',
+            isB: true,
+            isC: true
+        }
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="../util/vue.js"></script>
+    <meta charset="UTF-8">
+    <title>e</title>
+    <style>
+        .static {
+            font-size: 100px;
+            width: 600px;
+            margin: 0 auto;
+            background-color: yellow;
+            height: 120px;
+            line-height: 120px;
+            text-align: center;
+        }
+
+        .class-a {
+            color: #FF0000;
+        }
+
+        .class-b {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    <div class="static" v-bind:class="{ 'class-a' : isA, 'class-b': isB}">学习Vue.js中</div>
+    <div align="center">
+        <button @click="isA =!isA">isA={{isA}}</button>
+        <button @click="isB =!isB">isB={{isB}}</button>
+    </div>
+</div>
+<script>
+    var vm = new Vue({
+        el: '#app',
+        data: {
+            isA: true,
+            isB: true
+        }
+    })
+</script>
+</body>
+</html>

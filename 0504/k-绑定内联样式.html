@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>k</title>
+    <script src="../util/vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <div v-bind:style="{ color:activeColor ,'font-size':fontSize+'px','background-color':bgcolor}">
+        我在学习Vue.js
+    </div>
+</div>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            activeColor: 'red',
+            fontSize: 30,
+            bgcolor: 'yellow'
+        }
+    })
+</script>
+</body>
+</html>

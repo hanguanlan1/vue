@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>m</title>
+    <script src="../util/vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <div v-bind:style="ccgo">
+        我在测试中，无语了，对面的2个傻货能不能不要说话了，烦死了，坑爹!
+    </div>
+</div>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            styleObject: {
+                color: 'red',
+                fontSize: '16px'
+            },
+            styleObject1: {
+                color: 'yellow',
+                fontSize: '30px'
+            },
+            itemA: 100,
+            itemB: 98
+        },
+        computed: {
+            ccgo: function () {
+                if (this.itemA > this.itemB) {
+                    return this.styleObject;
+                } else {
+                    return this.styleObject1;
+                }
+            }
+        }
+    })
+</script>
+</body>
+</html>
